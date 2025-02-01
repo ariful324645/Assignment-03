@@ -25,6 +25,23 @@
       .font-sora {
         font-family: "sora";
       }
+
+      /* animate */
+      @keyframes slideIn {
+        0% {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      .animate-slideIn {
+        animation: slideIn 1s ease-out forwards;
+      }
+      
     </style>
     <script>
       tailwind.config = {
@@ -135,28 +152,31 @@
         class="flex lg:relative flex-col md:flex-row px-8 lg:px-0 justify-between items-center"
       >
         <div class="flex lg:absolute left-5 lg:left-0 top-28 items-center">
-          <div class="space-y-5  h-96">
-            <h3 class="text-4xl adlam-display">
+          <div class="space-y-5 h-96">
+            <h3 class="text-4xl adlam-display  animate-bounce">
               Pamper Your Pet,<br />
               Because They Deserve <br />
-              the Bes
+              the Best
             </h3>
             <p class="pt-5">
               Discover a world of treats, toys, and essentials handpicked for
               <br />
               your furry friends. Shop now and make tails wag with joy!
             </p>
-            <div class=" pt-10">
+            <div class="pt-10">
               <button
-              class="text-xl font-sora py-3 px-7 rounded-lg bg-[#FFDC26] hover:scale-110 transition-transform duration-300  cursor-pointer animate-spin"
-            >
-              Register
-            </button>
+                class="text-xl font-sora py-3 px-7 rounded-lg bg-[#FFDC26] hover:scale-110 transition-transform duration-300 cursor-pointer"
+              >
+                Register
+              </button>
             </div>
           </div>
         </div>
-        <div class=""><img src="./c1-assets/cat-big.png" alt="" /></div>
+        <div>
+          <img src="./c1-assets/cat-big.png" alt="Cute cat" />
+        </div>
       </section>
+
       <!--browser category-->
       <section class="mt-32 px-8 lg:px-0 mb-32">
         <h3 class="text-4xl adlam-display mb-12">Browse By Categories</h3>
@@ -462,7 +482,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-6 gap-4 lg:gap-7">
           <!--card 1-->
           <div class="card bg-[#FFF9F4] w-full shadow-xl h-[400px]">
-            <figure class=" p-2 h-[250px] w-full">
+            <figure class="p-2 h-[250px] w-full">
               <img
                 src="./c1-assets/cute-pet-small.png"
                 alt="Shoes"
@@ -480,9 +500,9 @@
             </div>
           </div>
 
-          <!--card 1-->
+          <!--card 2-->
           <div class="card bg-[#FFF9F4] w-full shadow-xl h-[400px]">
-            <figure class=" p-2 h-[300px] w-full">
+            <figure class="p-2 h-[300px] w-full">
               <img
                 src="./c1-assets/cat3-removebg-preview.png"
                 alt="Shoes"
@@ -495,91 +515,90 @@
                 The pet looks very beautiful and attractive
               </p>
               <div class="card-actions w-full pt-2">
-                <button class="btn btn-primary w-full">Buy Now</button>
+                <button class="btn btn-success w-full">Buy Now</button>
               </div>
             </div>
           </div>
 
-         <!--card 1-->
-         <div class="card bg-[#FFF9F4] w-full shadow-xl h-[400px]">
-          <figure class=" p-2 h-[250px] w-full">
-            <img
-              src="./c1-assets/dog2-removebg-preview.png"
-              alt="Shoes"
-              class="rounded-xl h-full object-contain w-full"
-            />
-          </figure>
-          <div class="card-body items-center text-center">
-            <h2 class="card-title font-sora text-xl capitalize">pets!</h2>
-            <p class="font-sora text-xs md:text-lg">
-              The pet looks very beautiful and attractive
-            </p>
-            <div class="card-actions w-full pt-2">
-              <button class="btn btn-primary w-full">Buy Now</button>
+          <!--card 3-->
+          <div class="card bg-[#FFF9F4] w-full shadow-xl h-[400px]">
+            <figure class="p-2 h-[250px] w-full">
+              <img
+                src="./c1-assets/dog2-removebg-preview.png"
+                alt="Shoes"
+                class="rounded-xl h-full object-contain w-full"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title font-sora text-xl capitalize">pets!</h2>
+              <p class="font-sora text-xs md:text-lg">
+                The pet looks very beautiful and attractive
+              </p>
+              <div class="card-actions w-full pt-2">
+                <button class="btn btn-secondary w-full">Buy Now</button>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!--card 1-->
-        <div class="card bg-[#FFF9F4] w-full shadow-xl h-[400px]">
-          <figure class=" p-2 h-[300px] w-full">
-            <img
-              src="./c1-assets/cat3-removebg-preview.png"
-              alt="Shoes"
-              class="rounded-xl h-full object-contain w-full"
-            />
-          </figure>
-          <div class="card-body items-center text-center">
-            <h2 class="card-title font-sora text-xl capitalize">pets!</h2>
-            <p class="font-sora text-xs md:text-lg">
-              The pet looks very beautiful and attractive
-            </p>
-            <div class="card-actions w-full pt-2">
-              <button class="btn btn-primary w-full">Buy Now</button>
+          <!--card 4-->
+          <div class="card bg-[#FFF9F4] w-full shadow-xl h-[400px]">
+            <figure class="p-2 h-[300px] w-full">
+              <img
+                src="./c1-assets/cat3-removebg-preview.png"
+                alt="Shoes"
+                class="rounded-xl h-full object-contain w-full"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title font-sora text-xl capitalize">pets!</h2>
+              <p class="font-sora text-xs md:text-lg">
+                The pet looks very beautiful and attractive
+              </p>
+              <div class="card-actions w-full pt-2">
+                <button class="btn btn-error w-full">Buy Now</button>
+              </div>
             </div>
           </div>
-        </div>
 
-         <!--card 1-->
-         <div class="card bg-[#FFF9F4] w-full shadow-xl h-[400px]">
-          <figure class=" p-2 h-[250px] w-full">
-            <img
-              src="./c1-assets/dog3-removebg-preview.png"
-              alt="Shoes"
-              class="rounded-xl h-full object-contain w-full"
-            />
-          </figure>
-          <div class="card-body items-center text-center">
-            <h2 class="card-title font-sora text-xl capitalize">pets!</h2>
-            <p class="font-sora text-xs md:text-lg">
-              The pet looks very beautiful and attractive
-            </p>
-            <div class="card-actions w-full pt-2">
-              <button class="btn btn-primary w-full">Buy Now</button>
+          <!--card 5-->
+          <div class="card bg-[#FFF9F4] w-full shadow-xl h-[400px]">
+            <figure class="p-2 h-[250px] w-full">
+              <img
+                src="./c1-assets/dog3-removebg-preview.png"
+                alt="Shoes"
+                class="rounded-xl h-full object-contain w-full"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title font-sora text-xl capitalize">pets!</h2>
+              <p class="font-sora text-xs md:text-lg">
+                The pet looks very beautiful and attractive
+              </p>
+              <div class="card-actions w-full pt-2">
+                <button class="btn btn-accent w-full">Buy Now</button>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!--card 1-->
-        <div class="card bg-[#FFF9F4] w-full shadow-xl h-[400px]">
-          <figure class=" p-2 h-[300px] w-full">
-            <img
-              src="./c1-assets/cat2-removebg-preview.png"
-              alt="Shoes"
-              class="rounded-xl h-full object-contain w-full"
-            />
-          </figure>
-          <div class="card-body items-center text-center">
-            <h2 class="card-title font-sora text-xl capitalize">pets!</h2>
-            <p class="font-sora text-xs md:text-lg">
-              The pet looks very beautiful and attractive
-            </p>
-            <div class="card-actions w-full pt-2">
-              <button class="btn btn-primary w-full">Buy Now</button>
+          <!--card 6-->
+          <div class="card bg-[#FFF9F4] w-full shadow-xl h-[400px]">
+            <figure class="p-2 h-[300px] w-full">
+              <img
+                src="./c1-assets/cat2-removebg-preview.png"
+                alt="Shoes"
+                class="rounded-xl h-full object-contain w-full"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title font-sora text-xl capitalize">pets!</h2>
+              <p class="font-sora text-xs md:text-lg">
+                The pet looks very beautiful and attractive
+              </p>
+              <div class="card-actions w-full pt-2">
+                <button class="btn btn-info w-full">Buy Now</button>
+              </div>
             </div>
           </div>
-        </div>
-
         </div>
       </section>
       <!--third section-->
